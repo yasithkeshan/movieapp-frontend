@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleLogin = async () => {
     if (username && password) {
       try {
-        const response = await fetch("http://localhost/api/login", {
+        const response = await fetch("http:localhost:8000/api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
