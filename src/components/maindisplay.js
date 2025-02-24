@@ -3,10 +3,11 @@ import Slider from "react-slick";
 import ColorThief from "colorthief";
 
 import H1 from "../assets/img/h1.jpg";
-import H2 from "../assets/img/h2.png";
+import H2 from "../assets/img/h2.jpg";
 import H3 from "../assets/img/h3.jpg";
-import H4 from "../assets/img/h4.png";
-import H5 from "../assets/img/h5.png";
+import H4 from "../assets/img/h4.jpg";
+import H5 from "../assets/img/h5.jpg";
+import H6 from "../assets/img/h6.png";
 
 const movies = [
   { id: 1, title: "Movie 1", image: H1 },
@@ -14,6 +15,7 @@ const movies = [
   { id: 3, title: "Movie 3", image: H3 },
   { id: 4, title: "Movie 4", image: H4 },
   { id: 5, title: "Movie 5", image: H5 },
+  { id: 6, title: "Movie 6", image: H6 },
 ];
 
 const MainDisplay = () => {
@@ -72,7 +74,10 @@ const MainDisplay = () => {
                 transformStyle: "preserve-3d",
                 transition: "transform 0.5s ease-in-out",
                 margin: "10px 30px",
-                boxShadow: `0px 0px 40px ${boxShadowColors[movie.id] || "#000"}`,
+                boxShadow: `0px 20px 40px ${boxShadowColors[movie.id] || "#000"}`,
+                borderRadius: "15px",
+                overflow: "hidden",
+                
               }}
             >
               <img
@@ -80,7 +85,7 @@ const MainDisplay = () => {
                 alt={movie.title}
                 style={{
                   width: "100%",
-                  height: "500px",
+                  height: "400px",
                   objectFit: "cover",
                 }}
               />
